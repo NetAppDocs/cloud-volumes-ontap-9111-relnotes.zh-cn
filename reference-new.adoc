@@ -1,0 +1,152 @@
+---
+sidebar: sidebar 
+permalink: reference-new.html 
+keywords: 'what"s new, new, features, release notes, enhancements' 
+summary: Cloud Volumes ONTAP 9.11.1提供了一项新的增强功能。 
+---
+= Cloud Volumes ONTAP 9.11.1中的新增功能
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cloud Volumes ONTAP 9.11.1提供了新的增强功能。
+
+最新版本的 Cloud Manager 还引入了其他功能和增强功能。请参见 https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/whats-new.html["Cloud Manager 发行说明"^] 了解详细信息。
+
+
+
+== 9.11.1 GA (2022年8月1日)
+
+Cloud Volumes ONTAP 9.11.1的通用(GA)版本现已推出。GA 版本包含错误修复。
+
+
+
+== 9.11.1 RC1 (2022年6月7日)
+
+Cloud Volumes ONTAP 9.11.1候选版本1现已在AWS、Azure和Google Cloud中推出。此版本包含以下新增功能和增强功能：
+
+
+
+=== 性能增强
+
+我们提高了9.11.1或更高版本中创建的新聚合的读取性能。
+
+
+
+=== 提高存储效率
+
+从9.11.1版开始、为提高存储效率而启用的所有新卷都将包括一项称为"温度敏感型存储效率"的新压缩功能。不再使用上一代数据压缩功能。
+
+对温度敏感的存储效率会根据数据温度或数据使用频率对数据进行压缩。冷数据或不常使用的数据会以较高的压缩率进行重新压缩、以提高存储效率。
+
+
+
+=== AWS中的VPC共享
+
+现在、具有VPC共享的AWS支持Cloud Volumes ONTAP HA对。通过VPC共享、您的组织可以与其他AWS帐户共享子网。网络连接(VPC、子网和路由表)位于VPC所有者帐户中、而HA配置的EC2实例位于使用共享子网的参与者帐户中。
+
+https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploy-aws-shared-vpc.html["了解如何在共享子网中部署HA对"^]
+
+
+
+=== 新增 AWS 区域支持
+
+现在、AWS雅加达地区(亚太地区东南部3)支持Cloud Volumes ONTAP。
+
+https://cloud.netapp.com/cloud-volumes-global-regions["查看Cloud Volumes ONTAP 支持的区域的完整列表"^]
+
+
+
+=== 新增Azure区域支持
+
+现在、Azure巴西东南部地区支持Cloud Volumes ONTAP。
+
+https://cloud.netapp.com/cloud-volumes-global-regions["查看Cloud Volumes ONTAP 支持的区域的完整列表"^]
+
+
+
+=== 支持在Google Cloud中使用24个Storage VM
+
+在大多数配置中、Google Cloud中的Cloud Volumes ONTAP 现在支持24个Storage VM。
+
+* link:reference-limits-gcp.html#storage-vm-limits["详细了解Google Cloud中的Storage VM限制"]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-gcp.html["了解如何在Google Cloud中为Cloud Volumes ONTAP 创建提供数据的Storage VM"^]
+
+
+
+
+=== 全新Google Cloud区域支持
+
+现在、Cloud Volumes ONTAP HA对在米兰(欧洲-西部8)地区受支持。
+
+https://cloud.netapp.com/cloud-volumes-global-regions["查看Cloud Volumes ONTAP 支持的区域的完整列表"^]
+
+
+
+=== 修改新Storage VM的LIF服务
+
+从此版本开始、如果您在AWS或Azure中的Cloud Volumes ONTAP HA对上创建新的Storage VM、则需要修改此Storage VM的网络服务策略。需要修改服务、因为它可以确保Cloud Volumes ONTAP 可以使用iSCSI LIF进行出站管理连接。
+
+请注意、在Google Cloud中、Cloud Volumes ONTAP 不需要修改LIF服务、因为Cloud Manager API会在创建期间为您设置LIF服务。
+
+您需要运行的命令在以下页面上指定：
+
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-aws.html["了解如何在AWS中创建其他Storage VM"^]
+* https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-managing-svms-azure.html["了解如何在Azure中创建其他Storage VM"^]
+
+
+
+
+== 新增不支持的ONTAP 功能
+
+Cloud Volumes ONTAP 不支持ONTAP 9.11.1中引入的新多管理员验证功能。在Cloud Volumes ONTAP 上启用多管理员验证将导致配置不受支持。
+
+
+
+== 升级说明
+
+通读这些注释、了解有关升级到此版本的更多信息。
+
+
+
+=== 如何升级
+
+Cloud Volumes ONTAP 升级必须从 Cloud Manager 完成。您不应使用 System Manager 或命令行界面升级 Cloud Volumes ONTAP 。这样做可能会影响系统稳定性。
+
+http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ontap-cloud.html["了解在 Cloud Manager 通知您时如何升级"^]。
+
+
+
+=== 支持的升级路径
+
+您可以从9.11.0版和9.10.1版升级到Cloud Volumes ONTAP 9.11.1版。Cloud Manager将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。
+
+
+
+=== 所需版本的Connector
+
+要部署新的Cloud Volumes ONTAP 9.11.1系统并将现有系统升级到9.11.1、Cloud Manager Connector必须运行版本3.9.19或更高版本。
+
+
+TIP: 默认情况下，连接器会自动升级，因此您应运行最新版本。
+
+
+
+=== 停机
+
+* 升级单节点系统会使系统脱机长达 25 分钟，在此期间 I/O 会中断。
+* 升级 HA 对无中断， I/O 不会中断。在此无中断升级过程中，每个节点会同时进行升级，以继续为客户端提供 I/O 。
+
+
+
+
+=== c4 ， m4 和 r4 实例类型
+
+从 9.8 版开始，新的 Cloud Volumes ONTAP 系统不支持 C4 ， M4 和 r4 实例类型。如果您的现有 Cloud Volumes ONTAP 系统运行的是 C4 ， M4 或 r4 实例类型，则仍可升级到此版本。
+
+建议更改为 c5 ， m5 或 R5 实例系列中的实例类型。
