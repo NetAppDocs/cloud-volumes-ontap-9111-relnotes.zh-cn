@@ -178,7 +178,7 @@
     <li>
       
       <a href="https://docs.netapp.com/zh-cn/cloud-volumes-ontap-relnotes/reference-limits-gcp.html" target="_self">
-        <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.12.0</span></span>
+        <span translate="no" class="notranslate"><span>Cloud Volumes ONTAP</span><span class="version"> 9.12.1</span></span>
       </a>
                      
     </li>
@@ -592,7 +592,7 @@
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
 </script><div class="prod-nav" id="product-nav">
-  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/zh-cn/cloud-manager-family/"><img src="/zh-cn/cloud-volumes-ontap-9111-relnotes/images/left_arrow.png" alt=""><pre>所有 Cloud Manager 文档</pre></a>
+  <a target="_self" class="prod-fam-nav" href="https://docs.netapp.com/zh-cn/cloud-manager-family/"><img src="/zh-cn/cloud-volumes-ontap-9111-relnotes/images/left_arrow.png" alt=""><pre>所有BlueXP文档</pre></a>
 </div><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li 
       data-pdf-exists="true" 
@@ -768,7 +768,7 @@
 
         
         <li class="n-breadcrumb__list-item">
-          <a href="https://docs.netapp.com/zh-cn/cloud-manager-family/">Cloud Manager</a>
+          <a href="https://docs.netapp.com/zh-cn/cloud-manager-family/">BlueXP</a>
         </li>
         
 
@@ -804,7 +804,7 @@
 <p class="page-details">
   
     
-    <time datetime="2022-09-16 20:29:57 +0000">09/16/2022</time>
+    <time datetime="2022-12-09 16:25:12 +0000">12/09/2022</time>
     
   
 
@@ -828,7 +828,7 @@
 <p>Cloud Volumes ONTAP 系统的最大系统容量取决于其许可证。最大系统容量包括基于磁盘的存储以及用于数据分层的对象存储。</p>
 </div>
 <div class="paragraph">
-<p>NetApp 不支持超过系统容量限制。如果您达到许可的容量限制， Cloud Manager 将显示一条需要执行操作消息，并且不再允许您添加其他磁盘。</p>
+<p>NetApp 不支持超过系统容量限制。如果您达到许可的容量限制、BlueXP将显示一条需要执行操作消息、并且不再允许您添加其他磁盘。</p>
 </div>
 <div class="paragraph">
 <p>对于某些配置，磁盘限制会阻止您单独使用磁盘来达到容量限制。您可以通过达到容量限制 <a href="https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/concept-data-tiering.html" target="_blank" rel="noopener">"将非活动数据分层到对象存储"</a>。有关详细信息，请参见以下磁盘限制。</p>
@@ -872,10 +872,12 @@
 </tbody>
 </table>
 <div class="paragraph">
+<div class="title">对于 HA 对，是每个节点的许可容量限制还是整个 HA 对的许可容量限制？</div>
 <p>容量限制适用于整个 HA 对。不是每个节点。例如，如果使用高级版许可证，则两个节点之间的容量最多可达 368 TB 。</p>
 </div>
 <div class="paragraph">
-<p>不可以。HA 对中的数据会在节点之间同步镜像，以便在 Google Cloud 发生故障时可以使用这些数据。例如，如果您在节点 A 上购买了 8 TB 磁盘，则 Cloud Manager 还会在节点 B 上分配一个 8 TB 磁盘，用于镜像数据。虽然配置了 16 TB 的容量，但许可证限制仅会计入 8 TB 的容量。</p>
+<div class="title">对于 HA 对，镜像数据是否计入许可的容量限制？</div>
+<p>不可以。HA 对中的数据会在节点之间同步镜像，以便在 Google Cloud 发生故障时可以使用这些数据。例如、如果您在节点A上购买了8 TB磁盘、则BlueXP还会在节点B上分配一个8 TB磁盘、用于镜像数据。虽然配置了 16 TB 的容量，但许可证限制仅会计入 8 TB 的容量。</p>
 </div>
 </div>
 </div>
