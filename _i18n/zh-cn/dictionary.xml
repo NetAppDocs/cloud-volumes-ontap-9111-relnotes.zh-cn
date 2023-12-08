@@ -640,8 +640,6 @@
   <block id="813011e2103649bb71f124adedcc10ea" category="sidebar">博客社区</block>
   <block id="dd490b81914dd945601e442a41cb4222" category="sidebar">NetApp 社区</block>
   <block id="ad203e818e0c9d7f42f1c260b33875f3" category="sidebar">云网络研讨会</block>
-  <block id="117bdbda976fe8b3212bc3b6327a0a1b" category="sidebar">Cloud Volumes ONTAP</block>
-  <block id="dea335c9c6f638eb584011e253ad6ca1" category="sidebar">ONTAP 云</block>
   <block id="406542fd6b2bb7b1e564e4a6d627bddb" category="paragraph">NetApp 不支持超过系统容量限制。如果您达到许可的容量限制、BlueXP将显示一条需要执行操作消息、并且不再允许您添加其他磁盘。</block>
   <block id="2819feead2b07762a4465189ab8b2f52" category="paragraph-title">对于 HA 对，是每个节点的许可容量限制还是整个 HA 对的许可容量限制？</block>
   <block id="7093c2c9844cf46dcd5d50c6d596d244" category="paragraph-title">对于 HA 对，镜像数据是否计入许可的容量限制？</block>
@@ -677,7 +675,6 @@
   <block id="846a4ecea919427b6111365c125ada6f" category="list-text">这些列中列出的数字包括BlueXP默认创建的初始Storage VM。例如，如果此列中列出 24 个，则表示您可以再创建 23 个 Storage VM ，总共可以创建 24 个。</block>
   <block id="8e36f0f32d75ebd3c7851e726c538544" category="paragraph"><block ref="8e36f0f32d75ebd3c7851e726c538544" category="inline-link-rx"></block></block>
   <block id="bd5465eb0e8cf8f303aee7ea9420c8b1" category="sidebar">BlueXP博客</block>
-  <block id="7a45e6298bb69116e2c6db653fb88884" category="sidebar">所有BlueXP文档</block>
   <block id="90d21e45df2b69a8345b8381643767db" category="section-title">9.11.1 P4 (2022年12月18日)</block>
   <block id="c4426846e80c44f78da5d2553c87de70" category="paragraph">如果您的Connector运行的是3.9.24或更高版本、则Cloud Volumes ONTAP 现在可以为所有云提供商提供9.11.1 P4修补程序。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
   <block id="cae74b75cb879fa6011c4bc1e9acafed" category="inline-link">查看 P4 修补程序中已修复的错误列表</block>
@@ -706,4 +703,8 @@
 <block ref="3f0e03f473a215943c109dc7746cdb60" category="inline-link-macro-rx"></block>。</block>
   <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link-macro">NetApp 支持</block>
   <block id="0b55c70d5652d8fe1f5ddc75633eaa95" category="paragraph">请参见 <block ref="0bcfd67fb2b966e3378fbf640ee81a22" category="inline-link-macro-rx"></block> 了解有关这些实例类型的可用性和支持终止的更多信息。</block>
+  <block id="20314c780df920e061e85ca664b06b34" category="section-title">9.11.1 P12 (2023年12月8日)</block>
+  <block id="1c7a84870126840dd00b9ac34caafd27" category="paragraph">9.11.1 P12修补程序现在可用于所有云提供商的Cloud Volumes ONTAP。BlueXP将提示您将现有系统升级到此修补程序版本。</block>
+  <block id="8a1258bf37cf0340b92dd9f9ca39acfa" category="inline-link-macro">查看P12修补程序中已修复的错误列表</block>
+  <block id="77c997cb28636ecd655e99756fdaa0ba" category="paragraph"><block ref="0b217e42c1535e947bb6ff7ef24ffc50" category="inline-link-macro-rx"></block> （需要登录 NetApp 支持站点）。</block>
 </blocks>
