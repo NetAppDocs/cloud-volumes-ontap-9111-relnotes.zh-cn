@@ -116,7 +116,7 @@ https://bluexp.netapp.com/cloud-volumes-global-regions["查看Cloud Volumes ONTA
 
 现在、Cloud Volumes ONTAP HA对在米兰(欧洲-西部8)地区受支持。
 
-https://cloud.netapp.com/cloud-volumes-global-regions["查看Cloud Volumes ONTAP 支持的区域的完整列表"^]
+https://bluexp.netapp.com/cloud-volumes-global-regions["查看Cloud Volumes ONTAP 支持的区域的完整列表"^]
 
 
 
