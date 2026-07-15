@@ -20,6 +20,7 @@ Cloud Volumes ONTAP 9.11.1提供了新的增强功能。
 
 
 
+[[9-11-1-p12-8-december-2023]]
 == 9.11.1 P12 (2023年12月8日)
 
 9.11.1 P12修补程序现在可用于所有云提供商的Cloud Volumes ONTAP。BlueXP将提示您将现有系统升级到此修补程序版本。
@@ -28,6 +29,7 @@ link:https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/
 
 
 
+[[9-11-1-p6-19-february-2023]]
 == 9.11.1 P6 (2023年2月19日)
 
 如果您的连接器运行的是3.9.26或更高版本、则适用于Azure的Cloud Volumes ONTAP 现在可以使用9.11.1 P6修补程序。BlueXP将提示您将现有系统升级到此修补程序版本。
@@ -36,6 +38,7 @@ https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downl
 
 
 
+[[9-11-1-p4-18-december-2022]]
 == 9.11.1 P4 (2022年12月18日)
 
 如果您的Connector运行的是3.9.24或更高版本、则Cloud Volumes ONTAP 现在可以为所有云提供商提供9.11.1 P4修补程序。BlueXP将提示您将现有系统升级到此修补程序版本。
@@ -44,6 +47,7 @@ https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downl
 
 
 
+[[9-11-1-p3-19-october-2022]]
 == 9.11.1 P3 (2022年10月19日)
 
 如果您的Connector运行的是3.9.22或更高版本、则Cloud Volumes ONTAP 现在可以为所有云提供商提供9.11.1 P3修补程序。BlueXP将提示您将现有系统升级到此修补程序版本。
@@ -52,24 +56,28 @@ https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downl
 
 
 
+[[9-11-1-ga-1-aug-2022]]
 == 9.11.1 GA (2022年8月1日)
 
 Cloud Volumes ONTAP 9.11.1的通用(GA)版本现已推出。GA 版本包含错误修复。
 
 
 
+[[9-11-1-rc1-7-june-2022]]
 == 9.11.1 RC1 (2022年6月7日)
 
 Cloud Volumes ONTAP 9.11.1候选版本1现已在AWS、Azure和Google Cloud中推出。此版本包含以下新增功能和增强功能：
 
 
 
+[[performance-enhancement]]
 === 性能增强
 
 我们提高了9.11.1或更高版本中创建的新聚合的读取性能。
 
 
 
+[[increased-storage-efficiency]]
 === 提高存储效率
 
 从9.11.1版开始、为提高存储效率而启用的所有新卷都将包括一项称为"温度敏感型存储效率"的新压缩功能。不再使用上一代数据压缩功能。
@@ -78,6 +86,7 @@ Cloud Volumes ONTAP 9.11.1候选版本1现已在AWS、Azure和Google Cloud中推
 
 
 
+[[vpc-sharing-in-aws]]
 === AWS中的VPC共享
 
 现在、具有VPC共享的AWS支持Cloud Volumes ONTAP HA对。通过VPC共享、您的组织可以与其他AWS帐户共享子网。网络连接(VPC、子网和路由表)位于VPC所有者帐户中、而HA配置的EC2实例位于使用共享子网的参与者帐户中。
@@ -86,6 +95,7 @@ https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-deploy-aws-
 
 
 
+[[new-aws-region-support]]
 === 新增 AWS 区域支持
 
 现在、AWS雅加达地区(亚太地区东南部3)支持Cloud Volumes ONTAP。
@@ -94,6 +104,7 @@ https://bluexp.netapp.com/cloud-volumes-global-regions["查看Cloud Volumes ONTA
 
 
 
+[[new-azure-region-support]]
 === 新增Azure区域支持
 
 现在、Azure巴西东南部地区支持Cloud Volumes ONTAP。
@@ -102,6 +113,7 @@ https://bluexp.netapp.com/cloud-volumes-global-regions["查看Cloud Volumes ONTA
 
 
 
+[[support-for-24-storage-vms-in-google-cloud]]
 === 支持在Google Cloud中使用24个Storage VM
 
 在大多数配置中、Google Cloud中的Cloud Volumes ONTAP 现在支持24个Storage VM。
@@ -112,6 +124,7 @@ https://bluexp.netapp.com/cloud-volumes-global-regions["查看Cloud Volumes ONTA
 
 
 
+[[new-google-cloud-region-support]]
 === 全新Google Cloud区域支持
 
 现在、Cloud Volumes ONTAP HA对在米兰(欧洲-西部8)地区受支持。
@@ -120,6 +133,7 @@ https://bluexp.netapp.com/cloud-volumes-global-regions["查看Cloud Volumes ONTA
 
 
 
+[[modifying-lif-services-for-new-storage-vms]]
 === 修改新Storage VM的LIF服务
 
 从此版本开始、如果您在AWS或Azure中的Cloud Volumes ONTAP HA对上创建新的Storage VM、则需要修改此Storage VM的网络服务策略。需要修改服务、因为它可以确保Cloud Volumes ONTAP 可以使用iSCSI LIF进行出站管理连接。
@@ -134,18 +148,21 @@ https://bluexp.netapp.com/cloud-volumes-global-regions["查看Cloud Volumes ONTA
 
 
 
+[[new-unsupported-ontap-feature]]
 == 新增不支持的ONTAP 功能
 
 Cloud Volumes ONTAP 不支持ONTAP 9.11.1中引入的新多管理员验证功能。在Cloud Volumes ONTAP 上启用多管理员验证将导致配置不受支持。
 
 
 
+[[upgrade-notes]]
 == 升级说明
 
 通读这些注释、了解有关升级到此版本的更多信息。
 
 
 
+[[how-to-upgrade]]
 === 如何升级
 
 必须从BlueXP完成Cloud Volumes ONTAP 升级。您不应使用 System Manager 或命令行界面升级 Cloud Volumes ONTAP 。这样做可能会影响系统稳定性。
@@ -154,12 +171,14 @@ http://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-updating-ont
 
 
 
+[[supported-upgrade-path]]
 === 支持的升级路径
 
 您可以从9.11.0版和9.10.1版升级到Cloud Volumes ONTAP 9.11.1版。BlueXP将提示您将符合条件的Cloud Volumes ONTAP 系统升级到此版本。
 
 
 
+[[required-version-of-the-connector]]
 === 所需版本的Connector
 
 要部署新的Cloud Volumes ONTAP 9.11.1系统并将现有系统升级到9.11.1、BlueXP Connector必须运行版本3.9.19或更高版本。
@@ -169,6 +188,7 @@ TIP: 默认情况下，连接器会自动升级，因此您应运行最新版本
 
 
 
+[[downtime]]
 === 停机
 
 * 升级单节点系统会使系统脱机长达 25 分钟，在此期间 I/O 会中断。
@@ -177,6 +197,7 @@ TIP: 默认情况下，连接器会自动升级，因此您应运行最新版本
 
 
 
+[[upgrades-in-aws-with-c4-m4-and-r4-ec2-instance-types]]
 === 在AWS中使用C4、M4和R4 EC2实例类型进行升级
 
 在AWS中、新的Cloud Volumes ONTAP部署不再支持C4、M4和R4 EC2实例类型。如果现有系统运行的是C4、M4或r4实例类型、则必须更改为c5、M5或R5实例系列中的实例类型。如果无法更改实例类型、则需要在升级之前启用增强型网络连接。
